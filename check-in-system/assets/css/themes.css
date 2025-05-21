@@ -1,0 +1,282 @@
+/* Theme Styles for Check-In System */
+
+/* Light Theme (Default) */
+:root {
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #212529;
+    --border-color: #dee2e6;
+    --primary-color: #007bff;
+    --primary-hover: #0069d9;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --sidebar-bg: #ffffff;
+    --header-bg: #ffffff;
+    --input-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme - Enhanced with more vibrant colors */
+body.theme-dark {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --border-color: #2c2c2c;
+    --primary-color: #4dabf7;
+    --primary-hover: #339af0;
+    --secondary-color: #ced4da;
+    --success-color: #40c057;
+    --danger-color: #fa5252;
+    --sidebar-bg: #1a1a1a;
+    --header-bg: #1a1a1a;
+    --input-bg: #2c2c2c;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --accent-color: #7950f2;
+    --muted-text: #adb5bd;
+    --link-color: #74c0fc;
+    --highlight-bg: rgba(73, 80, 246, 0.15);
+    --calendar-highlight: #4dabf7;
+    --calendar-today: #7950f2;
+}
+
+/* Apply theme variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Enhanced styling for dark theme */
+body.theme-dark .sidebar-section h3 {
+    color: var(--accent-color);
+}
+
+body.theme-dark .btn-admin {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(77, 171, 247, 0.3);
+}
+
+body.theme-dark .btn-admin:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 4px 8px rgba(77, 171, 247, 0.4);
+}
+
+body.theme-dark .calendar-date {
+    border-color: #2c2c2c;
+}
+
+body.theme-dark .calendar-date:hover {
+    background-color: var(--highlight-bg);
+}
+
+body.theme-dark .current-day {
+    background-color: var(--calendar-today);
+    box-shadow: 0 0 10px rgba(121, 80, 242, 0.5);
+}
+
+body.theme-dark .check-in-count {
+    background-color: var(--success-color);
+    box-shadow: 0 2px 4px rgba(64, 192, 87, 0.3);
+}
+
+body.theme-dark .status-badge.check_in {
+    background-color: var(--success-color);
+    box-shadow: 0 2px 4px rgba(64, 192, 87, 0.3);
+}
+
+body.theme-dark .status-badge.check_out {
+    background-color: #868e96;
+    box-shadow: 0 2px 4px rgba(134, 142, 150, 0.3);
+}
+
+body.theme-dark small, 
+body.theme-dark .time,
+body.theme-dark .calendar-day {
+    color: var(--muted-text);
+}
+
+body.theme-dark a {
+    color: var(--link-color);
+}
+
+body.theme-dark .announcement {
+    border-left: 3px solid var(--accent-color);
+}
+
+body.theme-dark input:focus, 
+body.theme-dark select:focus, 
+body.theme-dark textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(77, 171, 247, 0.25);
+}
+
+body.theme-dark .sidebar-section.quick-actions a:hover {
+    background-color: var(--highlight-bg);
+}
+
+.dashboard-container {
+    background-color: var(--bg-color);
+}
+
+.dashboard-nav {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar-section {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-content {
+    background-color: var(--bg-color);
+}
+
+.status-card, 
+.settings-card,
+.attendance-card,
+.user-card,
+.profile-card,
+.calendar-date,
+.date-details-modal .date-details-content,
+.announcement {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+input, select, textarea {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.btn-admin, 
+.btn-action,
+.btn-checkin, 
+.btn-checkout, 
+.btn-logout {
+    color: white;
+}
+
+.btn-admin {
+    background-color: var(--primary-color);
+}
+
+.btn-admin:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-logout {
+    background-color: var(--danger-color);
+}
+
+.calendar-day {
+    color: var(--secondary-color);
+}
+
+.current-day {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.check-in-count {
+    background-color: var(--success-color);
+}
+
+.alert {
+    border: 1px solid var(--border-color);
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.2);
+    border-color: rgba(40, 167, 69, 0.3);
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.2);
+    border-color: rgba(220, 53, 69, 0.3);
+}
+
+/* Status badges */
+.status-badge {
+    color: white;
+}
+
+/* Status badges with improved styling */
+.status-badge.check_in {
+    background-color: var(--success-color);
+    color: white;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.2);
+    transition: all 0.2s ease;
+}
+
+.status-badge.check_in:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+.status-badge.check_out {
+    background-color: var(--danger-color);
+    color: white;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
+    transition: all 0.2s ease;
+}
+
+.status-badge.check_out:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+}
+
+/* Theme preview styles */
+.theme-preview.theme-light {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.theme-preview.theme-dark {
+    background-color: #121212;
+    border: 1px solid #2c2c2c;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-preview.theme-dark::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80%;
+    height: 20px;
+    background-color: #4dabf7;
+    border-radius: 3px;
+}
+
+.theme-preview.theme-dark::before {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    width: 60%;
+    height: 15px;
+    background-color: #40c057;
+    border-radius: 3px;
+}
